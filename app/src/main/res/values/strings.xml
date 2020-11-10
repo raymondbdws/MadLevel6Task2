@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MadLevel6Task2</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="popular">The most popular movies of </string>
+    <string name="year">year</string>
+    <string name="submit">submit</string>
+    <string name="overview">Overview</string>
+
+</resources>
