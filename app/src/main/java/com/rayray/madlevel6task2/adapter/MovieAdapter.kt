@@ -23,8 +23,12 @@ class MovieAdapter(private val movies: List<Movie>, private val onClick: (Movie)
             }
         }
 
-        fun bind(movie: Movie) {
+        fun databind(movie: Movie, position: Int) {
             Glide.with(context).load(movie.getPosterImage()).into(itemView.ivMoviePosterItem)
+
+            //to correct 0. Start number with 1.
+            var countPosition = position
+            itemView.tvPosition.text = "${++countPosition}."
         }
     }
 
@@ -36,7 +40,8 @@ class MovieAdapter(private val movies: List<Movie>, private val onClick: (Movie)
     }
 
     override fun onBindViewHolder(holder: MovieAdapter.ViewHolder, position: Int) {
-        holder.bind(movies[position])
+        holder.databind(movies[position], position)
+
     }
 
     override fun getItemCount(): Int {
